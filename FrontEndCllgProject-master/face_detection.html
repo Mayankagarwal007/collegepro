@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  
+    <style>
+        #video {
+        border: 1px solid black;
+        width: 400px;
+        height: 300px;
+    }
+
+    #photo {
+        border: 1px solid black;
+        width: 320px;
+        height: 240px;
+    }
+
+    #canvas {
+        /* display: none; */
+        position:absolute;
+    }
+
+    .camera {
+        width: 380px;
+        display: inline-block;
+    }
+
+    .output {
+        width: 340px;
+        display: inline-block;
+    }
+
+    #startbutton {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 36px;
+        padding: 5px;
+        background-color: #6a67ce;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        color: rgba(255, 255, 255, 1.0);
+        cursor: pointer;
+    }
+
+    .contentarea {
+        font-size: 16px;
+        font-family: Arial;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contentarea">
+        <h1 style="text-transform: capitalize; font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            Take Photo for face detection
+        </h1>
+        <div class="camera">
+            <video id="video" autoplay muted></video>
+        </div>
+        <div><button id="startbutton">Take photo</button></div>
+        <canvas id="canvas"></canvas>
+        <div class="output">
+            <img id="photo" alt="The screen capture  with details will appear in this box.">
+        </div>
+    </div>
+    <!-- <video id="video" width="720" height="560" autoplay muted></video> -->
+
+    <script defer src="js/face-api.min.js"></script>
+    <script defer src="js/face-script.js"></script>
+</body>
+
+</html>
